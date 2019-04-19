@@ -12,6 +12,7 @@ print(records)
 
 
 
+
 print(nota.infNFe.emit.CNPJ)
 
 print(nota.infNFe.det[0].prod.cEAN)
