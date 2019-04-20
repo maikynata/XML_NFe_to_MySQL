@@ -11,7 +11,7 @@ db = mysql.connector.Connect(host = '127.0.0.1', user = 'root', password ='' , d
 print(records)
 
 
-
+# teste 123
 
 print(nota.infNFe.emit.CNPJ)
 
