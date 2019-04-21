@@ -7,7 +7,7 @@ path = 'C:\\Users\\Avell\\Desktop\\tests'
 for filename in os.listdir(path):
     nfe = parser.parse('%s\\%s' % (path, filename))
 
-# Manual path test:
+# Manual path to test:
 # nfe = parser.parse('tests\\teste.xml')
 
     def insertXML(newlist):
