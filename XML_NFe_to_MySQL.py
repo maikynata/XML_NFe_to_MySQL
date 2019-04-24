@@ -101,5 +101,5 @@ for filename in os.listdir(path):
 
 # nfe.infNFe.det[0]
 
-# print do nó inteiro
+# print do nó inteiro em XML
 # nfe.infNFe.emit.export(sys.stdout, 0)
