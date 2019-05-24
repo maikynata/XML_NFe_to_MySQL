@@ -2,7 +2,8 @@ from nfelib.v4_00 import leiauteNFe_sub as parser
 import mysql.connector
 import os
 
-path = 'C:\\Users\\Avell\\Desktop\\tests'
+# path = 'C:\\Users\\Avell\\Desktop\\tests'
+path = 'D:\\goFisc\\teste'
 
 for filename in os.listdir(path):
     nfe = parser.parse('%s\\%s' % (path, filename))
@@ -14,12 +15,12 @@ for filename in os.listdir(path):
         try:
             connection = mysql.connector.connect(host='127.0.0.1', user='root', password='', database='test')
 
-            sql_insert_query = """ INSERT INTO `teste` VALUES (NULL,%s,NULL,NULL,NULL,NULL,%s,NULL,%s,%s,%s,%s,%s,%s,%s,
-            %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'RP_INFO_1.0.9.9',NULL,17871449000128,'Goias Comercio De Cosmeticos Ltda',
+            sql_insert_query = """ INSERT INTO `teste02` VALUES (NULL,%s,NULL,NULL,NULL,NULL,%s,NULL,%s,%s,%s,%s,%s,%s,%s,
+            %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'RP_INFO_1.0.9.9',NULL,%s,'Goias Comercio De Cosmeticos Ltda',
             NULL,'Av. Central N. 577 Qd. 197 Lt. 03',577,'Setor Empresarial',5208707,'Goiania','GO',74583350,1058,'Brasil',
             6235866377,105620947,3,NULL,17871449000985,'Goias Comercio De Cosmeticos Ltda',NULL,'Rod. Br-040 Km 12 Gleba f Lojas 065/066',
-            000,'Parque Esplanada 3',5221858,'Valparaiso De Goias','GO',72876902,1058,'Brasil',6136270180,1,105650323,NULL,1,NULL,162442,
-            %s,%s,%s,%s,'UN',1.0000,2.2700000000,2.27,'7896007540631','UN',1.0000,2.2700000000,1,NULL,NULL,NULL,0,20,3,41.6700,1.32,12.0000,
+            000,'Parque Esplanada 3',5221858,'Valparaiso De Goias','GO',72876902,1058,'Brasil',6136270180,1,105650323,NULL,%s,NULL,%s,
+            %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,NULL,NULL,NULL,0,20,3,41.6700,1.32,12.0000,
             0.16,NULL,NULL,49,0.00,0.0000,0.00,NULL,NULL,49,0.00,0.0000,0.00,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
             NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
             NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
@@ -68,29 +69,25 @@ for filename in os.listdir(path):
             nfe.infNFe.ide.indFinal,
             nfe.infNFe.ide.indPres,
             nfe.infNFe.ide.procEmi,
+            nfe.infNFe.emit.CNPJ,
+            nfe.infNFe.det[index].nItem,
+            nfe.infNFe.det[index].prod.cProd,
             nfe.infNFe.det[index].prod.cEAN,
             nfe.infNFe.det[index].prod.xProd,
             nfe.infNFe.det[index].prod.NCM,
-            nfe.infNFe.det[index].prod.CFOP))
+            nfe.infNFe.det[index].prod.CFOP,
+            nfe.infNFe.det[index].prod.uCom,
+            nfe.infNFe.det[index].prod.qCom,
+            nfe.infNFe.det[index].prod.vUnCom,
+            nfe.infNFe.det[index].prod.vProd,
+            nfe.infNFe.det[index].prod.cEANTrib,
+            nfe.infNFe.det[index].prod.uTrib,
+            nfe.infNFe.det[index].prod.qTrib,
+            nfe.infNFe.det[index].prod.vUnTrib,
+            nfe.infNFe.det[index].prod.indTot
+        ))
 
     insertXML(newlist)
-
-
-# nfe.infNFe.det[0].nItem
-# nfe.infNFe.det[0].prod.cProd
-# nfe.infNFe.det[0].prod.cEAN
-# nfe.infNFe.det[0].prod.xProd
-# nfe.infNFe.det[0].prod.NCM
-# nfe.infNFe.det[0].prod.CFOP
-# nfe.infNFe.det[0].prod.uCom
-# nfe.infNFe.det[0].prod.qCom
-# nfe.infNFe.det[0].prod.vUnCom
-# nfe.infNFe.det[0].prod.vProd
-# nfe.infNFe.det[0].prod.cEANTrib
-# nfe.infNFe.det[0].prod.uTrib
-# nfe.infNFe.det[0].prod.qTrib
-# nfe.infNFe.det[0].prod.vUnTrib
-# nfe.infNFe.det[0].prod.indTot
 
 
 ############################
