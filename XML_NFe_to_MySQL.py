@@ -3,7 +3,7 @@ import mysql.connector
 import os
 
 # path = 'C:\\Users\\Avell\\Desktop\\tests'
-path = 'D:\\goFisc\\teste'
+path = 'D:\\goFisc\\XML_0010219'
 
 for filename in os.listdir(path):
     nfe = parser.parse('%s\\%s' % (path, filename))
