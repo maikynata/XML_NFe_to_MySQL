@@ -13,9 +13,9 @@ for filename in os.listdir(path):
 
     def insertXML(newlist):
         try:
-            connection = mysql.connector.connect(host='127.0.0.1', user='root', password='', database='test')
+            connection = mysql.connector.connect(host='127.0.0.1', user='root', password='', database='xml')
 
-            sql_insert_query = """ INSERT INTO `teste02` VALUES (NULL,%s,NULL,NULL,NULL,NULL,%s,NULL,%s,%s,%s,%s,%s,%s,%s,
+            sql_insert_query = """ INSERT INTO `nfe022019` VALUES (NULL,%s,NULL,NULL,NULL,NULL,%s,NULL,%s,%s,%s,%s,%s,%s,%s,
             %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'RP_INFO_1.0.9.9',NULL,%s,'Goias Comercio De Cosmeticos Ltda',
             NULL,'Av. Central N. 577 Qd. 197 Lt. 03',577,'Setor Empresarial',5208707,'Goiania','GO',74583350,1058,'Brasil',
             6235866377,105620947,3,NULL,17871449000985,'Goias Comercio De Cosmeticos Ltda',NULL,'Rod. Br-040 Km 12 Gleba f Lojas 065/066',
@@ -32,8 +32,8 @@ for filename in os.listdir(path):
 
             result  = cursor.executemany(sql_insert_query, insert_tuple)
             connection.commit()
-            print(cursor.rowcount , "Record inserted successfully into python_users table")
-            print ("The XML was inserted successfully into teste table")
+            print(cursor.rowcount , "Record inserted successfully into xml table")
+            print ("The XML was inserted successfully into xml table")
         except mysql.connector.Error as error :
             connection.rollback()
             print("Failed to insert the XML into MySQL table {}".format(error))
