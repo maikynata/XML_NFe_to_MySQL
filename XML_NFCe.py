@@ -65,7 +65,7 @@ nfce = parser.parse('tests\\teste.xml')
             nfce.infNFe.ide.tpEmis,
             nfce.infNFe.ide.cDV,
             nfce.infNFe.ide.tpAmb,
-            nfce.infNFe.ide.finnfce,
+            nfce.infNFe.ide.finNFe,
             nfce.infNFe.ide.indFinal,
             nfce.infNFe.ide.indPres,
             nfce.infNFe.ide.procEmi,
@@ -84,11 +84,11 @@ nfce = parser.parse('tests\\teste.xml')
             nfce.infNFe.det[index].prod.uTrib,
             nfce.infNFe.det[index].prod.qTrib,
             nfce.infNFe.det[index].prod.vUnTrib,
-            nfce.infNFe.det[index].prod.indTot
+            nfce.infNFe.det[index].prod.indTot,
+            nfce.infNFe.det[index].prod.CEST
         ))
 
     insertXML(newlist)
-
 
 ############################
 
