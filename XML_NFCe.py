@@ -3,7 +3,7 @@ import mysql.connector
 import os
 
 # path = 'C:\\Users\\Avell\\Desktop\\tests'
-path = 'C:\\Users\\Avell\\Desktop\\nfce'
+path = 'C:\\Users\\Avell\\Desktop\\xml-nfce-001-2018'
 #
 for filename in os.listdir(path):
     nfce = parser.parse('%s\\%s' % (path, filename))
@@ -15,7 +15,7 @@ for filename in os.listdir(path):
         try:
             connection = mysql.connector.connect(host='127.0.0.1', user='root', password='', database='xml')
 
-            sql_insert_query = """ INSERT INTO `nfce_teste` VALUES (%s,%s,
+            sql_insert_query = """ INSERT INTO `nfce_001_2018` VALUES (%s,%s,
             %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
             'Goias Comercio De Cosmeticos Ltda',NULL,NULL,'Av. Central N. 577 Qd. 197 Lt. 03',577,'Setor Empresarial',5208707,'Goiania','GO',74583350,1058,'Brasil',6235866377,105620947,3,
             %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
