@@ -2,6 +2,7 @@ from nfelib.v4_00 import leiauteNFe_sub as parser
 import mysql.connector
 import os
 
+## teste commit
 # path = 'C:\\Users\\Avell\\Desktop\\tests'
 path = 'C:\\Users\\Avell\\Desktop\\xml-nfce-001-2018'
 #
