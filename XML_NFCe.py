@@ -10,7 +10,7 @@ for filename in os.listdir(path):
     nfce = parser.parse('%s\\%s' % (path, filename))
 
 # Manual path to test:
-# nfce = parser.parse('tests\\nfce-dist.xml')
+# nfce = parser.parse('tests\\nfce\\nfce-dist.xml')
 
     def insertXML(newlist):
         try:
