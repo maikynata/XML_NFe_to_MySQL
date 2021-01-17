@@ -14,3 +14,7 @@ six==1.15.0
 toml==0.10.2
 virtualenv==20.3.0
 wrapt==1.12.1
+
+# install nfelib
+# pip install git+https://github.com/akretion/nfelib
+# pip install git+https://github.com/maikynata/nfelib
