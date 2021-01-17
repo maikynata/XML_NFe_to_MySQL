@@ -2,8 +2,8 @@ from nfelib.v4_00 import leiauteNFe_sub as parser
 import mysql.connector
 import os
 
-# path = 'C:\\Users\\Avell\\Desktop\\tests'
-path = 'D:\\goFisc\\XML_0010219'
+path = 'D:\\goFisc\\teste'
+# path = 'C:\\Users\\Avell\\Projects\\XML_NFe_to_MySQL\\tests'
 
 for filename in os.listdir(path):
     nfe = parser.parse('%s\\%s' % (path, filename))
@@ -15,7 +15,7 @@ for filename in os.listdir(path):
         try:
             connection = mysql.connector.connect(host='127.0.0.1', user='root', password='', database='xml')
 
-            sql_insert_query = """ INSERT INTO `nfe022019` VALUES (NULL,%s,NULL,NULL,NULL,NULL,%s,NULL,%s,%s,%s,%s,%s,%s,%s,
+            sql_insert_query = """ INSERT INTO `nfe` VALUES (NULL,%s,NULL,NULL,NULL,NULL,%s,NULL,%s,%s,%s,%s,%s,%s,%s,
             %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'RP_INFO_1.0.9.9',NULL,%s,'Goias Comercio De Cosmeticos Ltda',
             NULL,'Av. Central N. 577 Qd. 197 Lt. 03',577,'Setor Empresarial',5208707,'Goiania','GO',74583350,1058,'Brasil',
             6235866377,105620947,3,NULL,17871449000985,'Goias Comercio De Cosmeticos Ltda',NULL,'Rod. Br-040 Km 12 Gleba f Lojas 065/066',
