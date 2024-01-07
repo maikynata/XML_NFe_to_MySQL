@@ -4,7 +4,7 @@ import os
 
 ## teste commit
 # path = 'C:\\Users\\Avell\\Desktop\\tests'
-path = 'C:\\Users\\Avell\\Projects\\XML_NFe_to_MySQL\\tests\\nfce'
+path = 'C:\\Users\\Avell\\Desktop\\Files\\001\\XML\\04-2023\\65'
 #
 for filename in os.listdir(path):
     nfce = parser.parse('%s\\%s' % (path, filename))
@@ -14,9 +14,9 @@ for filename in os.listdir(path):
 
     def insertXML(newlist):
         try:
-            connection = mysql.connector.connect(host='127.0.0.1', user='root', password='', database='xml')
+            connection = mysql.connector.connect(host='127.0.0.1', user='root', password='', database='bd_auditoria_2023')
 
-            sql_insert_query = """ INSERT INTO `nfce` VALUES (%s,%s,
+            sql_insert_query = """ INSERT INTO `nfe042023` VALUES (%s,%s,
             %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,
             'Goias Comercio De Cosmeticos Ltda',NULL,NULL,'Av. Central N. 577 Qd. 197 Lt. 03',577,'Setor Empresarial',5208707,'Goiania','GO',74583350,1058,'Brasil',6235866377,105620947,3,
             %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
