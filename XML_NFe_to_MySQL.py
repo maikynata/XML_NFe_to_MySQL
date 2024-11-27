@@ -3,7 +3,7 @@ import mysql.connector
 import os
 
 # path = 'D:\\goFisc\\teste'
-path = 'C:\\Users\\Avell\\Desktop\\Files\\001\\XML\\12-2023\\55'
+path = 'C:\\Users\\Avell\\Desktop\\XML-2023\\122023'
 
 for filename in os.listdir(path):
     nfe = parser.parse('%s\\%s' % (path, filename))
@@ -16,7 +16,7 @@ for filename in os.listdir(path):
             connection = mysql.connector.connect(host='127.0.0.1', user='root', password='', database='bd_auditoria_2023')
 
             sql_insert_query = """ INSERT INTO `nfe122023` VALUES (NULL,%s,NULL,NULL,NULL,NULL,%s,NULL,%s,%s,%s,%s,%s,%s,%s,
-            %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'RP_INFO_1.0.9.9',NULL,%s,'Goias Comercio De Cosmeticos Ltda',
+            %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'bluesoft',NULL,%s,'Goias Comercio De Cosmeticos Ltda',
             NULL,'Av. Central N. 577 Qd. 197 Lt. 03',577,'Setor Empresarial',5208707,'Goiania','GO',74583350,1058,'Brasil',
             6235866377,105620947,3,NULL,17871449000985,'Goias Comercio De Cosmeticos Ltda',NULL,'Avenida Meia Ponte',
             000,'Santa Genoveva',5221858,'Goiania','GO',74670400,1058,'Brasil',6136270180,1,105650323,NULL,%s,NULL,%s,
